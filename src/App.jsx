@@ -7,6 +7,10 @@ import ContactUs from './ContactUs/contact'
 import Layout from './components/Layout/Layout'
 import Developers from './Developers/Developers'
 import Register from './components/Register/Register'
+import UnitDetails from './pages/About/UnitDetails'
+import ZoneDetails from './Services/ZoneDetails'
+import DeveloperDetails from './Developers/DeveloperDetails'
+
 
 function App() {
   return (
@@ -15,8 +19,14 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/about" element={<About />} />
+        <Route path="/units/:id" element={<UnitDetails />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/zones/:id" element={<ZoneDetails />} />
         <Route path="/developers" element={<Developers />} />
+        <Route
+  path="/developers/:id"
+  element={<DeveloperDetails />}
+/>
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/register" element={<Register />} />
       </Route>

@@ -1,14 +1,17 @@
 import React from 'react'
 import heroImg from '../assets/images/image 1.png'
-import rec from '../assets/images/rectangle 3.png'
-import Aparment from '../assets/Icons/Apartment.png'
-import ant from '../assets/Icons/ant-design_smile-outlined.png'
-import material from '../assets/Icons/material-symbols_award-star-outline-rounded.png'
-import streamline from '../assets/Icons/streamline_investment-selection.png'
+// import rec from '../assets/images/rectangle 3.png'
+// import Aparment from '../assets/Icons/Apartment.png'
+// import ant from '../assets/Icons/ant-design_smile-outlined.png'
+// import material from '../assets/Icons/material-symbols_award-star-outline-rounded.png'
+// import streamline from '../assets/Icons/streamline_investment-selection.png'
 import fb from '../assets/Icons/basil_facebook-solid.svg'
 import instagram from '../assets/Icons/basil_instagram-solid.svg'
 import a from '../assets/Icons/Group.svg'
 import tiktok from '../assets/Icons/ic_round-tiktok.svg'
+
+// import AutoPlay from './AutoPlay'
+
 
 
 export default function Hero({bg,title,desc,btn,btnContent,icons}) {
@@ -38,47 +41,127 @@ export default function Hero({bg,title,desc,btn,btnContent,icons}) {
         </div>}
       </div>
     {/* </div> */}
-    {/* <div className='flex justify-center items-center'>
-              <p className='p-15 font-semibold text-2xl max-w-3xl leading-tight mb-6'>Benchmarks of Success</p>
-              <img src={rec}className='pt-6 absolute w-auto'/>
-
-    </div> */}
-    {/* <div>
-        <ul className='flex justify-evenly items-stretch bg-white gap-4  '>
-            <li className='p-12 text-center border border-white rounded-md cursor-pointer shadow-lg p-auto' >
-                <img src={Aparment} className='mx-auto mb-2 h-8'/>
-                <p>48</p>
-                <p>Properties Managed</p>
-            </li>
-            <li className='p-12  text-center border border-white rounded-md cursor-pointer shadow-lg' >
-                <img src={streamline} className='mx-auto mb-2 h-8'/>
-                <p>90M</p>
-                <p>Total Managed Investments</p>
-            </li>
-            <li className='p-12 text-center border border-white rounded-md cursor-pointer shadow-lg' >
-                <img src={ant} className='mx-auto mb-2 h-8'/>
-                <p>500</p>
-                <p>Happ Client</p>
-            </li>
-            <li className='p-12  text-center border border-white rounded-md cursor-pointer shadow-lg' >
-                <img src={material} className=' mx-auto mb-2 h-8'/>
-                <p>90%</p>
-                <p>Client Satisfaction</p>
-            </li>
-        </ul>
-    </div>
-
-     <div className='flex justify-center items-center'>
-              <p className='p-15 font-semibold text-2xl max-w-3xl leading-tight mb-6'>About Grand Atlas</p>
-              <img src={rec}className='pt-6 absolute w-auto'/>
-
-    </div> */}
-
     
-    </>
 
-  )
+      
+
+
+   {/* <div>
+      <AutoPlay />
+   </div> */}
+    </>
+  );
 }
+
+
+
+
+
+
+{/* <section className="mt-[80px] ">
+ 
+  <div className="flex flex-col items-center">
+    <p className="font-semibold text-2xl leading-tight">About Grand Atlas</p>
+    <img src={rec} alt="" className="mt-[10px] w-auto" />
+  </div>
+
+
+  <div className=" grid grid-cols-1 lg:grid-cols-[673fr_624fr] gap-[70px] mt-[70px] px-[24px] lg:px-[37px] ">
+
+    <img
+      src={aboutImg}
+      alt="About Grand Atlas"
+      className="w-full aspect-[673/667] object-cover  rounded-tl-[100px] rounded-tr-[100px]"
+    />
+
+  
+    <div className="flex flex-col justify-between pt-[24px]">
+      <p className="font-['Lato'] font-normal text-[24px]  text-[#554E4E]">
+        We began with a singular, uncompromising vision: to bridge the gap between world-class architecture and the individuals who define our global culture. We recognized that for the discerning client, a home is rarely just a physical structure; it is a curated environment, a private gallery, and the ultimate expression of a life well-lived. Our journey started not in the pursuit of transactions, but in the pursuit of excellence. We set out to dismantle the traditional, high-volume real estate model in favor of a bespoke, 'private office' approach—one where quality always supersedes quantity, and where every client is treated as the sole focus of our firm,
+        
+        We don't just find you a home; we secure your peace of mind through a veil of absolute professional confidentiality.
+      </p>
+
+      <button className="w-[258px] h-[47px] rounded-[8px] bg-gradient-to-r from-[#8E1616] to-[#C34B4B] text-white font-['Lato',sans-serif] font-semibold cursor-pointer self-start">
+        Know More →
+      </button>
+    </div>
+  </div>
+</section>
+  
+   <div className="flex flex-col items-center mt-[80px]">
+        <p className="font-semibold text-2xl leading-tight">Strategic Locations</p>
+        <img src={rec} alt="" className="mt-[10px] w-auto" />
+      </div>
+
+   
+<div className="flex flex-col items-center mt-[80px]">
+  <p className="font-semibold text-2xl leading-tight">Future Landmarks</p>
+  <img src={rec} alt="" className="mt-[10px] w-auto" />
+</div>
+
+<div className="px-10 pb-16 mt-[40px]">
+  <ul className="flex justify-between items-stretch gap-6">
+    <li className="flex-1 p-3 bg-white border border-gray-200 rounded-md shadow-lg">
+      <div className="relative">
+        <img src={land1} alt="Palm Jeffa Office No.2" className="w-full h-52 object-cover rounded-md" />
+        <span className="absolute top-2 right-2 bg-[#8E1616] text-white text-xs px-3 py-1 rounded-sm">Office</span>
+      </div>
+      <div className="flex items-center gap-3 my-4">
+        <img src={logo1} alt="" className="h-10 object-contain" />
+        <div>
+          <p className="font-semibold text-sm">Palm Jeffa Office No.2</p>
+          <p className="text-xs text-gray-600">اكتبي الوصف هنا</p>
+        </div>
+      </div>
+      <button className="w-full py-1 border border-[#8E1616] text-[#8E1616] text-sm rounded-md cursor-pointer">
+        View Details
+      </button>
+    </li>
+
+    <li className="flex-1 p-3 bg-white border border-gray-200 rounded-md shadow-lg">
+      <div className="relative">
+        <img src={land2} alt="Hacienda Duplex No.4" className="w-full h-52 object-cover rounded-md" />
+        <span className="absolute top-2 right-2 bg-[#8E1616] text-white text-xs px-3 py-1 rounded-sm">Duplex</span>
+      </div>
+      <div className="flex items-center gap-3 my-4">
+        <img src={logo2} alt="" className="h-10 object-contain" />
+        <div>
+          <p className="font-semibold text-sm">Hacienda Duplex No.4</p>
+          <p className="text-xs text-gray-600">اكتبي الوصف هنا</p>
+        </div>
+      </div>
+      <button className="w-full py-1 border border-[#8E1616] text-[#8E1616] text-sm rounded-md cursor-pointer">
+        View Details
+      </button>
+    </li>
+
+    <li className="flex-1 p-3 bg-white border border-gray-200 rounded-md shadow-lg">
+      <div className="relative">
+        <img src={land1} alt="Luxury Family Villa" className="w-full h-52 object-cover rounded-md" />
+        <span className="absolute top-2 right-2 bg-[#8E1616] text-white text-xs px-3 py-1 rounded-sm">Villa</span>
+      </div>
+      <div className="flex items-center gap-3 my-4">
+        <img src={logo1} alt="" className="h-10 object-contain" />
+        <div>
+          <p className="font-semibold text-sm">Luxury Family Villa</p>
+          <p className="text-xs text-gray-600">اكتبي الوصف هنا</p>
+        </div>
+      </div>
+      <button className="w-full py-1 border border-[#8E1616] text-[#8E1616] text-sm rounded-md cursor-pointer">
+        View Details
+      </button>
+    </li>
+  </ul>
+
+  <div className="flex justify-center items-center gap-2 mt-8">
+    <span className="w-8 h-2 rounded-full bg-[#8E1616]"></span>
+    <span className="w-2 h-2 rounded-full bg-gray-300"></span>
+    <span className="w-2 h-2 rounded-full bg-gray-300"></span>
+  </div>
+</div> */}
+    
+
 // import React from 'react'
 // import heroImg from '../assets/images/image 1.png'
 // import rec from '../assets/images/rectangle 3.png'
