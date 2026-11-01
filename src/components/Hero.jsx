@@ -1,116 +1,116 @@
-import React from 'react'
-import heroImg from '../assets/images/image 1.png'
-import fb from '../assets/Icons/basil_facebook-solid.svg'
-import instagram from '../assets/Icons/basil_instagram-solid.svg'
-import a from '../assets/Icons/Group.svg'
-import tiktok from '../assets/Icons/ic_round-tiktok.svg'
-
-export default function Hero({bg,title,desc,btn,btnContent,icons}) {
-  return (
-    <>
-      <div
-        className="relative min-h-screen px-5 bg-cover bg-center text-white flex flex-col justify-center items-center text-center "
-        style={{ backgroundImage: `url(${bg})` }}
-      >
-        <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl max-w-xl mb-6 md:mb-8 leading-tight">{title}
-        </h1>
-
-        <p className="text-sm sm:text-base md:text-lg font-bold max-w-4xl mb-8 md:mb-12">{desc}
-        </p>
-      {btn &&
-        <button className="px-6 py-2 bg-linear-to-r from-[#8E1616] to-[#C34B4B] w-full max-w-64 rounded-md">
-          {btnContent}
-        </button>}
- {icons &&
-        <div className="absolute bottom-4 left-0 right-0 flex flex-row justify-center gap-3 md:right-auto md:bottom-8 md:px-15 md:py-17 md:flex-col md:gap-4">
-          <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={fb} alt="facebook" />
-          <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={instagram} alt="instagram" />
-          <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={a} alt="social" />
-          <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={tiktok} alt="tiktok" />
-        </div>}
-      </div>
-    </>
-  );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React from 'react'
 // import heroImg from '../assets/images/image 1.png'
-// // import rec from '../assets/images/rectangle 3.png'
-// // import Aparment from '../assets/Icons/Apartment.png'
-// // import ant from '../assets/Icons/ant-design_smile-outlined.png'
-// // import material from '../assets/Icons/material-symbols_award-star-outline-rounded.png'
-// // import streamline from '../assets/Icons/streamline_investment-selection.png'
 // import fb from '../assets/Icons/basil_facebook-solid.svg'
 // import instagram from '../assets/Icons/basil_instagram-solid.svg'
 // import a from '../assets/Icons/Group.svg'
 // import tiktok from '../assets/Icons/ic_round-tiktok.svg'
 
-// // import AutoPlay from './AutoPlay'
-
-
-
 // export default function Hero({bg,title,desc,btn,btnContent,icons}) {
 //   return (
 //     <>
 //       <div
-//         className="relative h-screen bg-cover bg-center text-white flex flex-col justify-center items-center text-center "
+//         className="relative min-h-screen px-5 bg-cover bg-center text-white flex flex-col justify-center items-center text-center "
 //         style={{ backgroundImage: `url(${bg})` }}
 //       >
-//         <h1 className="font-bold text-5xl max-w-xl mb-8 leading-tight">{title}
-//           {/* Redefining the Horizon of Modern Luxury Living */}
+//         <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl max-w-xl mb-6 md:mb-8 leading-tight">{title}
 //         </h1>
 
-//         <p className="text-lg font-bold max-w-4xl mb-12">{desc}
-//           {/* We believe a home should be a sanctuary of innovation and an extension of your personal brand. By combining cutting-edge market data with a keen eye for world-class design, we help you navigate the complexities of the luxury market to find a space that inspires your best work and your deepest rest */}
+//         <p className="text-sm sm:text-base md:text-lg font-bold max-w-4xl mb-8 md:mb-12">{desc}
 //         </p>
 //       {btn &&
-//         <button className="px-6 py-2 bg-linear-to-r from-[#8E1616] to-[#C34B4B] w-64 rounded-md">
+//         <button className="px-6 py-2 bg-linear-to-r from-[#8E1616] to-[#C34B4B] w-full max-w-64 rounded-md">
 //           {btnContent}
 //         </button>}
-//  {icons && 
-//         <div className="absolute bottom-8 left-0 px-15 py-17 flex flex-col gap-4">
-//           <img className="size-12 border-[3px] border-white rounded-full p-2" src={fb} alt="facebook" />
-//           <img className="size-12 border-[3px] border-white rounded-full p-2" src={instagram} alt="instagram" />
-//           <img className="size-12 border-[3px] border-white rounded-full p-2" src={a} alt="social" />
-//           <img className="size-12 border-[3px] border-white rounded-full p-2" src={tiktok} alt="tiktok" />
+//  {icons &&
+//         <div className="absolute bottom-4 left-0 right-0 flex flex-row justify-center gap-3 md:right-auto md:bottom-8 md:px-15 md:py-17 md:flex-col md:gap-4">
+//           <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={fb} alt="facebook" />
+//           <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={instagram} alt="instagram" />
+//           <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={a} alt="social" />
+//           <img className="size-9 md:size-12 border-[3px] border-white rounded-full p-1.5 md:p-2" src={tiktok} alt="tiktok" />
 //         </div>}
 //       </div>
-//     {/* </div> */}
+//     </>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+import heroImg from '../assets/images/image 1.png'
+// import rec from '../assets/images/rectangle 3.png'
+// import Aparment from '../assets/Icons/Apartment.png'
+// import ant from '../assets/Icons/ant-design_smile-outlined.png'
+// import material from '../assets/Icons/material-symbols_award-star-outline-rounded.png'
+// import streamline from '../assets/Icons/streamline_investment-selection.png'
+import fb from '../assets/Icons/basil_facebook-solid.svg'
+import instagram from '../assets/Icons/basil_instagram-solid.svg'
+import a from '../assets/Icons/Group.svg'
+import tiktok from '../assets/Icons/ic_round-tiktok.svg'
+
+// import AutoPlay from './AutoPlay'
+
+
+
+export default function Hero({bg,title,desc,btn,btnContent,icons}) {
+  return (
+    <>
+      <div
+        className="relative h-screen bg-cover bg-center text-white flex flex-col justify-center items-center text-center "
+        style={{ backgroundImage: `url(${bg})` }}
+      >
+        <h1 className="font-bold text-5xl max-w-xl mb-8 leading-tight">{title}
+          {/* Redefining the Horizon of Modern Luxury Living */}
+        </h1>
+
+        <p className="text-lg font-bold max-w-4xl mb-12">{desc}
+          {/* We believe a home should be a sanctuary of innovation and an extension of your personal brand. By combining cutting-edge market data with a keen eye for world-class design, we help you navigate the complexities of the luxury market to find a space that inspires your best work and your deepest rest */}
+        </p>
+      {btn &&
+        <button className="px-6 py-2 bg-linear-to-r from-[#8E1616] to-[#C34B4B] w-64 rounded-md">
+          {btnContent}
+        </button>}
+ {icons && 
+        <div className="absolute bottom-8 left-0 px-15 py-17 flex flex-col gap-4">
+          <img className="size-12 border-[3px] border-white rounded-full p-2" src={fb} alt="facebook" />
+          <img className="size-12 border-[3px] border-white rounded-full p-2" src={instagram} alt="instagram" />
+          <img className="size-12 border-[3px] border-white rounded-full p-2" src={a} alt="social" />
+          <img className="size-12 border-[3px] border-white rounded-full p-2" src={tiktok} alt="tiktok" />
+        </div>}
+      </div>
+    {/* </div> */}
     
 
       
 
 
-//    {/* <div>
-//       <AutoPlay />
-//    </div> */}
-//     </>
-//   );
-// }
+   {/* <div>
+      <AutoPlay />
+   </div> */}
+    </>
+  );
+}
 
 
 
