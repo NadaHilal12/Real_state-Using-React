@@ -135,60 +135,124 @@
 //    );
 //  }
 
+// import { Link } from 'react-router-dom'
+// import logo from '../assets/Icons/Logo Option.png'
+// import frame from '../assets/images/Frame 10.png'
+
+// export default function Navbar() {
+//   return (
+//     <>
+    
+//        <div className="bg-white text-white text-1xl font-bold sticky top-0 z-50 ">
+
+     
+
+//          <ul className="flex justify-center items-center gap-15 px-5  py-5">
+//   {/* الصورة: absolute عشان تقعد على الشمال من غير ما تأثر على الـ links اللي في النص */}
+//           <img src={logo} alt="logo" className="absolute left-5 top-1/2 -translate-y-1/2 h-19 w-auto"/>
+          
+//             {/* <img src='src\assets\Icons\Logo Option.png'></img> */}
+//             <Link to='/'>
+//            <li className="  text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">
+//              Home
+//           </li>
+//            </Link>
+//              <Link to='/about'>
+//            <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">
+//             Units
+//           </li>
+//             </Link>
+//             <Link to='/Services'>
+//          <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">
+//             Zones
+//           </li>
+//            </Link>
+//             <Link to='/Developers'>
+//          <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">        Developers
+//            </li>
+//           </Link>
+
+//            <Link to='/contact'>
+//          <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">        ContactUs
+//            </li>
+//           </Link> 
+//              <Link to='/ٌRegister'>
+//          <li className=" absolute right-5 top-1  h-12 w-auto text-center   p-4 border border-white rounded-md cursor-pointer shadow-lg   bg-red-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ">  Register
+//            </li>
+//           </Link> 
+          
+//          </ul>
+//          <div>
+//         {/* <img src={frame} className=' flex justify-center items-center '></img> */}
+//        </div>
+//        </div>
+       
+
+// {/* <div className="mx-auto mt-10 w-24 h-24 rounded-full bg-pink-500 animate-bounce"></div> */}
+//     </>
+//    );
+//  }
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/Icons/Logo Option.png'
 import frame from '../assets/images/Frame 10.png'
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false)
+
   return (
     <>
-    
-       <div className="bg-white text-white text-1xl font-bold sticky top-0 z-50 ">
+       <div className="bg-white text-white text-1xl font-bold sticky top-0 z-50 min-h-20">
 
-     
+         {/* اللوجو: خرجته بره الـ ul عشان يفضل ظاهر على الموبايل لما القايمة تتقفل */}
+         <img src={logo} alt="logo" className="absolute left-5 top-10 md:top-1/2 -translate-y-1/2 h-19 w-auto"/>
 
-         <ul className="flex justify-center items-center gap-15 px-5  py-5">
-  {/* الصورة: absolute عشان تقعد على الشمال من غير ما تأثر على الـ links اللي في النص */}
-          <img src={logo} alt="logo" className="absolute left-5 top-1/2 -translate-y-1/2 h-19 w-auto"/>
-          
-            {/* <img src='src\assets\Icons\Logo Option.png'></img> */}
-            <Link to='/'>
+         {/* زرار التلات شرط - موبايل فقط */}
+         <button
+           onClick={() => setOpen(!open)}
+           className="md:hidden absolute right-5 top-10 -translate-y-1/2 flex flex-col gap-1.5 p-2 cursor-pointer"
+         >
+           <span className={`h-0.5 w-7 bg-gray-600 transition-all duration-300 ${open ? 'rotate-45 translate-y-2' : ''}`}></span>
+           <span className={`h-0.5 w-7 bg-gray-600 transition-all duration-300 ${open ? 'opacity-0' : ''}`}></span>
+           <span className={`h-0.5 w-7 bg-gray-600 transition-all duration-300 ${open ? '-rotate-45 -translate-y-2' : ''}`}></span>
+         </button>
+
+         <ul className={`${open ? 'flex' : 'hidden'} flex-col pt-24 pb-6 gap-6 md:flex md:flex-row md:pt-5 md:pb-5 justify-center items-center md:gap-15 px-5`}>
+
+            <Link to='/' onClick={() => setOpen(false)}>
            <li className="  text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">
              Home
           </li>
            </Link>
-             <Link to='/about'>
+             <Link to='/about' onClick={() => setOpen(false)}>
            <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">
             Units
           </li>
             </Link>
-            <Link to='/Services'>
+            <Link to='/Services' onClick={() => setOpen(false)}>
          <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">
             Zones
           </li>
            </Link>
-            <Link to='/Developers'>
+            <Link to='/Developers' onClick={() => setOpen(false)}>
          <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">        Developers
            </li>
           </Link>
 
-           <Link to='/contact'>
+           <Link to='/contact' onClick={() => setOpen(false)}>
          <li className=" text-gray-400 cursor-pointer shadow-lg transition-all duration-500 hover:text-red-600 hover:shadow-2xl hover:-translate-y-1 hover:border-b-2 hover:border-red-500">        ContactUs
            </li>
-          </Link> 
-             <Link to='/ٌRegister'>
-         <li className=" absolute right-5 top-1  h-12 w-auto text-center   p-4 border border-white rounded-md cursor-pointer shadow-lg   bg-red-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ">  Register
+          </Link>
+             <Link to='/Register' onClick={() => setOpen(false)}>
+         <li className=" md:absolute md:right-5 md:top-1 h-12 w-auto text-center p-4 border border-white rounded-md cursor-pointer shadow-lg bg-red-800 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 ">  Register
            </li>
-          </Link> 
-          
+          </Link>
+
          </ul>
          <div>
         {/* <img src={frame} className=' flex justify-center items-center '></img> */}
        </div>
        </div>
-       
-
-{/* <div className="mx-auto mt-10 w-24 h-24 rounded-full bg-pink-500 animate-bounce"></div> */}
     </>
    );
  }

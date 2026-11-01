@@ -57,18 +57,18 @@ export default function Contact() {
     },
     {
       icon: emailIcon,
-      text: 'Grand.Atlas.Support@gmail.com',
-      href: 'mailto:Grand.Atlas.Support@gmail.com',
+      text: 'Email',
+      href: 'mailto:nadahilal3142@gmail.com',
     },
     {
       icon: mobileIcon,
-      text: '01247859622',
-      href: 'tel:01247859622',
+      text: 'Mobile phone',
+      href: 'tel:01555979026',
     },
     {
       icon: phoneIcon,
-      text: '035987124',
-      href: 'tel:035987124',
+      text: 'Telephone',
+      href: 'tel:035435297',
     },
   ]
 
